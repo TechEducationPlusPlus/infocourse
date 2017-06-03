@@ -1,0 +1,129 @@
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+		meta(name='description', content='The core aim of our project is to create online learning management system that combines best practices in organizing training so that it will be interesting, useful and much easier for the students. The most important part of our project is to fertilize future programmers, showing them that it is not as difficult as it sounds. This will happen through brief and extensive online practical competitions taken their levels, with certificates and prizes for the best ones.')
+		meta(name='author', content='TechEdu++')
+		meta(name='keywords', content='Learning, Online, System, Presentations, Videos, Exam')
+		meta(name='distribution', content='web')
+		meta(name='robots', content='index, follow')
+		meta(name="google-site-verification", content="eCU54DH_8vQnzWO0Q3fXoQmalvA3rCjiXSH6mZdDgkg")
+		meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+		link(rel='icon', href='/favicon.png')
+		title Студентска система :: TechEdu ++
+		link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700')
+		link(rel='stylesheet', href='//fonts.googleapis.com/icon?family=Material+Icons')
+		link(rel='stylesheet', href='/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/css/bootstrap-material-design.min.css')
+		link(rel='stylesheet', href='/css/ripples.min.css')
+		link(rel='stylesheet', href='/css/snackbar.min.css')
+		link(rel='stylesheet', href='/css/extension.css')
+		link(href='/css/jumbotron.css', rel='stylesheet')
+		meta(property='og:url', content='https://www.facebook.com/TechEducationGroup/')
+		meta(property='og:type', content='website')
+		link(rel='stylesheet', href='/news/d9757859af.css')
+		link(rel="stylesheet", href="/node_modules/font-awesome/css/font-awesome.min.css")
+
+		#fb-root
+		script.
+			(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		block styles
+	body
+		block classes
+		nav.navbar.navbar-static-top.navbar-default
+			.container
+				.nav-header
+					button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href='#') TechEdu ++
+				.navbar-collapse.collapse.navbar-responsive-collapse
+					ul.nav.navbar-nav
+						li(class=typeof homeclass === "undefined" ? "" : "active")
+							a(href=typeof homeclass === "undefined" ? "/" : "#") Начало
+						li(class=typeof newsclass === "undefined" ? "" : "active")
+							a(href='/news') Новини
+						li(class=typeof companyclass === "undefined" ? "" : "active")
+							a(href=typeof companyclass === "undefined" ? "/companies.php" : "#") Компании
+						li(class=typeof chatclass === "undefined" ? "" : "active")
+							a(href='https://chat.techedu.cf') Форум
+						li(class=typeof aboutclass === "undefined" ? "" : "active")
+							a(href=typeof aboutclass === "undefined" ? "/aboutus.php" : "#") За нас
+					ul.nav.navbar-nav.navbar-right
+						li(class=typeof loginclass === "undefined" ? "" : "active")
+							a(href=typeof loginclass === "undefined" ? "/login.php" : "#") Login
+		block content
+		footer
+			.container.container-holder
+				ul.row
+					li.col-md-3.col-sm-12.col-xs-12.footer-list-wrapper
+						h3.list-title TechEdu ++
+						hr
+						ul.footer-list
+							li
+								a(href='/aboutus.php') За нас
+							li
+								a(href='/aboutus.php#trainers') Лектори
+							li
+								a(href='/aboutus.php#authors') Автори на проекта
+					li.col-md-3.col-sm-12.col-xs-12.footer-list-wrapper
+						h3.list-title Курсове &amp; Семинари
+						hr
+						ul.footer-list
+							li
+								a(href='/trainings/tracks') Тракове
+							li
+								a(href='/trainings/courses') Курсове
+							li
+								a(href='/trainings/seminars') Семинари
+					li.col-md-3.col-sm-12.col-xs-12.footer-list-wrapper
+						h3.list-title Партньори
+						hr
+						ul.footer-list
+							li
+								a(target='_blank', href='https://delta.bg/') Delta.BG
+							li
+								a(target='_blank', href='http://www.vrexpress.bg/') VR Express
+							li
+								a(target='_blank', href='https://consent.io/') Consent.io
+							li
+								a(target='_blank', href='http://www.igreet.co/') iGreet
+					li.col-md-3.col-sm-12.col-xs-12.footer-list-wrapper
+						ul.social
+							li
+								a.icon-btn(href='https://facebook.com/TechEducationGroup/', target='_blank')
+									span.fa.fa-2x.fa-facebook
+							li
+								a.icon-btn(href='https://www.youtube.com/channel/UCT1g_MbzP5UJauAqmvNq1aQ', target='_blank')
+									span.fa.fa-2x.fa-youtube-play
+							li
+								a.icon-btn(href='http://github.com/TechEducationPlusPlus/', target='_blank')
+									span.fa.fa-2x.fa-github
+						.all-rights-reserved
+							p &copy; 2017 TechEdu ++
+							p Всички права запазени.
+							p 
+								a(rel='license', href='http://creativecommons.org/licenses/by-nc-nd/2.5/in/')
+									img(alt='Creative Commons License', style='border-width:0', src='https://i.creativecommons.org/l/by-nc-nd/2.5/in/88x31.png')
+
+		script(src='/js/jquery.min.js')
+		script(src="/js/tether.min.js")
+		script(src='/js/bootstrap.min.js')
+		script(src="/js/material.min.js")
+		script(src="/js/ripples.min.js")
+		script(src="/js/snackbar.min.js")
+		script(src="/js/jquery.nouislider.min.js")
+		script(src='/js/main.js')
+		block js

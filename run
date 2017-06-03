@@ -1,0 +1,1 @@
+sudo php -S `cat HOST` -t $PWD .htrouter.php

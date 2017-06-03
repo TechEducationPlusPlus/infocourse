@@ -1,0 +1,23 @@
+block classes
+	- var homeclass = undefined
+	- var chatclass = undefined
+	- var contactclass = undefined
+	- var aboutclass = undefined
+
+extends ../../template
+
+block content
+	.jumbotron
+		.container
+			center
+				img(style="background-color: rgba(0,0,0,0);", src='/img/logo.png')
+				h1.display-3
+					span="We develop new learning methods"
+
+	.container
+		.row
+			.panel.panel-primary
+				.panel-heading
+					h3.list-title Семинари
+				.panel-body
+					<?php include_once ($_SERVER["DOCUMENT_ROOT"] . "/lib/get/seminars.php");	?>

@@ -1,0 +1,4 @@
+#!/bin/bash
+i=$1;
+./node_modules/jade/bin/jade.js $i;
+mv `echo ${i%.*}`.html ../`echo ${i%.*}`.php;

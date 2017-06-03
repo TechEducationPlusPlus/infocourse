@@ -1,0 +1,50 @@
+block classes
+	- var homeclass = undefined
+	- var chatclass = undefined
+	- var contactclass = undefined
+	- var aboutclass = undefined
+
+extends ../../template
+
+block styles
+	link(rel='stylesheet', href='//in.consent.io/consentio-inline.min.css')
+	style(type='text/css').
+		.quote {
+			border: 1px solid black;
+			background: #ccffeb url('/img/quote-bg.png') 10px 10px no-repeat;
+			padding: 10px 10px 10px 45px;
+			margin: 5px 0 20px 0;
+			font-size: 11px !important;
+			word-break: normal !important;
+			word-wrap: break-word !important;
+			white-space: normal !important;
+			line-height: 1.4em;
+		}
+
+block content
+	.container
+		.panel.panel-primary
+			.panel-heading
+				h4="{{title}}"
+			.panel-body
+				iframe(width='560', height='315', src='{{link}}', frameborder='0', allowfullscreen='')
+				h3 {{label}}
+		.panel.panel-primary
+			.panel-heading
+				h4#commentsText(style='-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;', unselectable='on', onselectstart='return false;', onmousedown='return false;')
+					| Коментари: 
+					span#number.badge {{number}}
+			.panel-body
+				form.form-group(method='post', onsubmit='return false;')
+					| Име: 
+					input#name.form-control(name='name', type='text', value='{{name}}', readonly='')
+					| Коментар: 
+					textarea#comment.form-control(name='comment')
+					input.form-control(name='video', type='hidden', value='{{params}}')
+					button#publish.btn.btn-primary Публикувай
+				#comments_container(style="width: 100%")
+
+block js
+	script(src='/js/comment.js')
+	script(language='javascript', type='text/javascript', src='//in.consent.io/consentio-inline.min.js')
+	<?php include_once ($_SERVER["DOCUMENT_ROOT"] . "/lib/get/visit.php") ?>

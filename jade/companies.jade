@@ -1,0 +1,91 @@
+block classes
+	- var homeclass = undefined
+	- var companyclass = '.active'
+	- var chatclass = undefined
+	- var contactclass = undefined
+	- var aboutclass = undefined
+
+extends template
+
+block styles
+	style(type='text/css').
+		.col-md-6 {
+			width: 49.5%
+		}
+		.thumbnail {
+			margin-right: 2px;
+			padding: 0px;
+		}
+		.img-responsive {
+			width: 100%;
+		}
+		.caption-full {
+			border-left: 1px solid #aaa;
+			border-bottom: 1px solid #aaa;
+			border-right: 1px solid #aaa;
+			padding: 4px;
+		}
+
+block content
+	.jumbotron
+		.container
+			center
+				img(style="background-color: rgba(0,0,0,0);", src='/img/logo.png')
+				h1.display-3
+					span="We develop new learning methods"
+
+	.container
+		.col-md-6.thumbnail#consentio
+			img.img-responsive(src='https://cdn-images-1.medium.com/max/500/1*_D54lhvvgRh9Z9_XjyE0OA@2x.png', alt='')
+			.caption-full
+				h3.pull-right основана 2016г.
+				p
+					br
+				h3 Проекти:
+				p
+					.panel.panel-primary
+						.panel-heading
+							h4 The net.vote platform
+						.panel-body
+							p The net.vote platform allows millions of people to express their opinion simultaneously, in a fun, easy and universally understandable way. 
+							p Our clients and partners get real-time insights allowing them to react promptly to the opinion of their customers, clients, stakeholders and audience.
+					.panel.panel-primary
+						.panel-heading
+							h4 Свободни позиции
+						.panel-body
+							ul
+								li data scientists
+								li data viz
+								li front end devs 
+					.panel.panel-primary
+						.panel-heading
+							h4 Езици за програмиране
+						.panel-body
+							p= "JavaScript, HTML, Perl, Python, Java, Redis, PostgreSQL, REACT, Node.js"
+					h4 Стажантски програми за ученици: Да
+					h4 
+						Сайт: 
+						a(href="https://consent.io") https://consent.io
+		.col-md-6.thumbnail#deltabg
+			img.img-responsive(src='https://blog.delta.bg/wp-content/uploads/2016/01/Delta-pic.png', alt='')
+			.caption-full
+				h3.pull-right основана 2009г.
+				p
+					br
+				h3 Проекти:
+				p
+					.panel.panel-primary
+						.panel-heading
+							h4 Основна дейност
+						.panel-body
+							p Hosting
+							p Cloud based solutions
+					.panel.panel-primary
+						.panel-heading
+							h4 Езици за програмиране
+						.panel-body
+							p= "PHP, Bash, Perl"
+					h4 Стажантски програми за ученици: Да
+					h4 
+						Сайт: 
+						a(href="https://delta.bg") https://delta.bg

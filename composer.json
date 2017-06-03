@@ -1,0 +1,32 @@
+{
+    "name": "TechEducationPlusPlus/infocourse",
+    "description": "In fact there are a lot of built-in learning management systems. They have some hard-wired cons. For example: Video lessons continue about 3-4 hours, which is too long; Most systems have no practical exercises or assignments. However, programming can be learned best with practice; other systems have only theoretical tests, which is not enough for good skill developing. The core aim of our project is to create online learning management system that combines best practices in organizing training so that it will be interesting, useful and much easier for the students. The most important part of our project is to fertilize future programmers, showing them that it is not as difficult as it sounds. This will happen through brief and extensive online practical competitions taken their levels, with certificates and prizes for the best ones. Our project is focused mainly on beginners and more advanced programmers. The competitions will include theoretical part, but will mostly be oriented practically.",
+    "keywords": [
+        "web", "education", "platform", "learning", "management", "system"
+    ],
+    "homepage": "https://github.com/TechEducationPlusPlus/infocourse",
+    "license": "GPL v.3",
+    "authors": [
+        {
+            "name": "Alex Tsvetanov",
+            "email": "alex@tsalex.tk",
+            "homepage": "https://tsalex.tk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=5.5.0",
+		"components/font-awesome": "*",
+		"timhovius/bootstrap-material-design": "*",
+		"twitter/bootstrap": ">=3.0.0"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+    },
+    "autoload-dev": {
+    },
+    "extra": {
+    }
+}
+

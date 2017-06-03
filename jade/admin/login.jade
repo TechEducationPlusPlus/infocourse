@@ -1,0 +1,35 @@
+extends ../template
+
+block admin
+	li.nav-item.active
+		a.nav-link(href="#") Administration
+
+block content
+	.jumbotron(style="/*height: 110%; */width: 100%; background-image: url('/maia.png');")
+		.container
+			center
+				img(style="background-color: rgba(0,0,0,0);", src='/img/logo.png')
+				h1.display-3
+					span="Administration"
+
+	.container
+		.panel.panel-primary
+			.panel-heading
+				h4
+					span="Tracks  "
+					a(style="color: white;", href="#", onclick="add_track();", data-toggle="modal", data-target="#createTrack")
+						span.glyphicon.glyphicon-plus(aria-hidden="true")
+			.panel-body
+				<?php include_once ($_SERVER["DOCUMENT_ROOT"] . "/lib/admin/get/tracks.php");	?>
+		.panel.panel-primary
+			.panel-heading
+				h4
+					span= "Seminars  "
+					a(style="color: white;", href="#", onclick="add_seminar();", data-toggle="modal", data-target="#createSeminar")
+						span.glyphicon.glyphicon-plus(aria-hidden="true")
+			.panel-body
+				<?php include_once ($_SERVER["DOCUMENT_ROOT"] . "/lib/admin/get/seminars.php");	?>
+	.container#dialog
+block js
+	script(src='/js/admin/main.js')
+

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for i in `find . -name \*.jade` ;
+do
+	./build_one $i &
+done

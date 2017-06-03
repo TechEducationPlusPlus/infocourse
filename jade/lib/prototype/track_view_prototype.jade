@@ -1,0 +1,37 @@
+block classes
+	- var homeclass = undefined
+	- var chatclass = undefined
+	- var contactclass = undefined
+	- var aboutclass = undefined
+
+extends ../../template
+
+block styles
+	style(type='text/css').
+		footer {
+			color: white;
+		}
+
+
+block content
+	.container
+		.panel.panel-primary
+			.panel-heading
+				h4="{{title}}"
+			.panel-body
+				{{all}}
+		.panel.panel-primary#markdownParent
+			.panel-body#markdown
+				{{plan}}
+block js
+	script(src='/js/showdown.min.js')
+	script.
+		if ($('#markdown').html() == '')
+		{
+			$("#markdownParent").remove();
+		}
+		else
+		{
+			var converter = new showdown.Converter();
+			$('#markdown').html(converter.makeHtml($('#markdown').html()));
+		}

@@ -1,0 +1,16 @@
+#!/bin/bash
+i=0;
+echo "" > top.php
+echo "" > 1.php
+while IFS='' read -r line || [[ -n "$line" ]]; do
+    echo "$line" >> $(($i / 5 + 1)).php
+	if [[ $i -lt 5 ]]
+	then
+		echo "$line" >> top.php
+	fi
+	i=$(($i + 1));
+	if [[ $(($i / 5 + 1)) -ne $(($(($i - 1)) / 5 + 1)) ]]
+	then
+		echo "" > $(($i / 5 + 1)).php
+	fi
+done < all.php

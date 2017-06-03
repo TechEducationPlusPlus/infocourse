@@ -1,0 +1,40 @@
+extends template
+
+block classes
+	- var homeclass = undefined;
+	- var loginclass = ".active";
+	- var registerclass = undefined;
+	- var contactclass = undefined;
+	- var aboutclass = undefined;
+
+block content
+	.jumbotron
+		.container
+			center
+				img(src='/img/acdemy4_logo.png')
+				h1.display-3="We develop new learning methods"
+	.container
+		.row
+			.col-md-4.white
+				<?php if ($_REQUEST ["type"] == "fail") {echo '<div class="alert alert-danger" role="alert"><strong>Login failed!</strong> <a href="#" class="alert-link">Try to change</a> email or username or password.</div>';} ?>
+				form.form-signin(action='login_action.php')
+					h2.form-signin-heading Please sign in
+					label.sr-only(for='inputEmail') Email address or username
+					input#inputEmail.form-control(name="ID", placeholder='Email address', required='', autofocus='', type='text')
+					label.sr-only(for='inputPassword') Password
+					input#inputPassword.form-control(name="Password", placeholder='Password', required='', type='password')
+					button.btn.btn-raised.btn-success.btn-block(type='submit') Sign in
+			.col-md-4.white
+				<?php if ($_REQUEST ["type"] == "fail") {echo '<div class="alert alert-danger" role="alert"><strong>Registration failed!</strong> <a href="#" class="alert-link">Try to change</a> email or username.</div>';} ?>
+				form.form-signin(action='register_action.php')
+					h2.form-signin-heading Please sign up
+					label.sr-only(for='inputName') Name
+					input#inputName.form-control(name="Name", placeholder='Your name', required='', autofocus='', type='text')
+					label.sr-only(for='inputName') Username
+					input#inputName.form-control(name="Username", placeholder='Your username', required='', autofocus='', type='text')
+					label.sr-only(for='inputEmail') Email address
+					input#inputEmail.form-control(name="Email", placeholder='Email address', required='', autofocus='', type='email')
+					label.sr-only(for='inputPassword') Password
+					input#inputPassword.form-control(name="Password", placeholder='Password', required='', type='password')
+					button.btn.btn-raised.btn-success.btn-block(type='submit') Sign up
+

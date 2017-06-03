@@ -1,0 +1,1 @@
+cat drop.sql init.sql | mysql -u root -p

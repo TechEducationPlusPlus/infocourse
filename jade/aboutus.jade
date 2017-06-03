@@ -1,0 +1,101 @@
+block classes
+	- var homeclass = undefined
+	- var chatclass = undefined
+	- var contactclass = undefined
+	- var aboutclass = '.active'
+
+extends template
+
+block styles
+	style(type='text/css').
+		.main-container {
+			background-color: white;
+			border: 15px solid white;
+		}
+		.main-container h3 {
+			color: black !important;
+		}
+		
+block content
+	.container.main-container
+		.panel.panel-primary
+			.panel-heading
+			.panel-body
+				.fb-like(data-href='https://www.facebook.com/TechEducationGroup/', data-colorscheme='light', data-layout='standard', data-action='like', data-size='large', data-show-faces='true', data-share='true', style="color:white")
+		section#authors.panel.panel-primary
+			.panel-heading
+				h4="Автори"
+			.panel-body
+				.col-md-4(style='height: 450px;')
+					a.normal(href='https://techedu.cf/members/alex')
+						img(height='150px', src='/img/main.jpg')
+						h2 Алекс Цветанов
+					br
+					h3 Team leader
+					p Програмист, участник в състезания по информатика
+					p Дезайнер
+					p Бази данни и сървърна поддръжка
+					h3 Трейнър
+				.col-md-4(style='height: 450px;')
+					a.normal(href='https://techedu.cf/members/dimo')
+						img(height='150px', src='/aboutus/aboutus/dimo.jpg')
+						h2 Димо Чанев
+					br
+					h3 Техническа поддръжка
+					p Програмист, участник в състезания по информатика
+					h3
+						| Admin на 
+						strong TechEdu++ Judge System
+		section#trainers.panel.panel-primary
+			.panel-heading
+				h4="Лектори"
+			.panel-body
+				.col-md-4(style='height: 450px;')
+					a.normal(href='https://techedu.cf/members/iasen_georgiev')
+						img(style="height: 150px", src='/members/img/iasen_georgiev.jpg')
+						h2 Ясен Георгиев
+					ul
+						li
+							h4 PHP
+						li
+							h4 MySQL
+					a.normal(href="http://yasen.me")= "http://yasen.me"
+				.col-md-4(style='height: 450px;')
+					a.normal(href='https://techedu.cf/members/marin_shalamanov')
+						img(style="height: 150px", src='/members/img/marin_shalamanov.jpg')
+						h2 Марин Шаламанов
+					ul
+						li
+							h4 Студен във факултета по математика и информатика на Софийски Университет
+						li
+							h4 Лектор в SAP Labs Bulgaria
+						li
+							h4 Учител в ПЧМГ
+				.col-md-4(style='height: 450px;')
+					img(style="height: 150px", src='/members/img/no_profile.png')
+					h2 Евгени Василев
+					ul
+						li
+							h4 Algorithms
+						li
+							h4 HTML, CSS &amp; JavaScript
+						li
+							h4 C/C++
+					p
+						НПМГ
+		section#partners.panel.panel-primary
+			.panel-heading
+				h4="Партньори"
+			.panel-body
+				.col-md-4
+					a.normal(href='http://consent.io')
+						img(class="img-responsive", src='https://cdn-images-1.medium.com/max/500/1*_D54lhvvgRh9Z9_XjyE0OA@2x.png')
+				.col-md-4
+					a.normal(href='https://delta.bg')
+						img(class="img-responsive", src='https://blog.delta.bg/wp-content/uploads/2016/01/Delta-pic.png')
+				.col-md-4
+					a.normal(href='www.vrexpress.bg')
+						img(class="img-responsive", src='/partners/img/vrexpress.png')
+				.col-md-4
+					a.normal(href='http://www.igreet.co/')
+						img(class="img-responsive", src='http://www.igreet.co/wp-content/uploads/2016/02/igreet-logo.png')
