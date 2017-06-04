@@ -14,17 +14,22 @@
 		if ($json [$i][1] == 0)
 		{
 			$result = $conn->query ("SELECT * FROM `News` WHERE `Num`='{$json [$i][0]}'")->fetch_assoc();
-			echo "<div class='course-item col-md-4 equal'><h2>{$result["alt"]}</h2><a href='/news' role='button' class='btn btn-raised active'>Новини »</a></div>";
+			echo "<div class='course-item col-md-12 equal'><h2>{$result["alt"]}</h2><a href='/news' role='button' class='btn btn-raised active'>Новини »</a></div>";
 		}
 		else if ($json [$i][1] == 1) // Video
 		{
 			$result = $conn->query ("SELECT * FROM `Videos` WHERE `UniqueID`='{$json [$i][0]}'")->fetch_assoc();
-			echo "<div class='course-item col-md-4 equal'><h2>{$result["ID"]}</h2><br>Част от курса '{$result["Course"]}'<br><a href='{$result["Link"]}' role='button' class='btn btn-raised active'>Видео »</a></div>";
+			//$result["ID"] = strip_tags ($result["ID"], "span");
+			$result["ID"] = preg_replace('/<span class="nvote" data-return="true">(.*?)<\/span>/i', '', $result["ID"]);
+			$result["ID"] = preg_replace('/<br>/i', ' ', $result["ID"]);
+			echo "<div class='course-item col-md-12 equal'><h2>{$result["ID"]}</h2><br>Част от курса '{$result["Course"]}'<br><a href='{$result["Link"]}' role='button' class='btn btn-raised active'>Видео »</a></div>";
 		}
 		else if ($json [$i][1] == 2) // Exam
 		{
 			$result = $conn->query ("SELECT * FROM `Videos` WHERE `UniqueID`='{$json [$i][0]}'")->fetch_assoc();
-			echo "<div class='course-item col-md-4 equal'><h2>{$result["ID"]}</h2>Част от курса '{$result["Course"]}'<br><a href='{$result["ExamLink"]}' role='button' class='btn btn-raised active'>Домашно »</a></div>";
+			$result["ID"] = preg_replace('/<span class="nvote" data-return="true">(.*?)<\/span>/i', '', $result["ID"]);
+			$result["ID"] = preg_replace('/<br>/i', ' ', $result["ID"]);
+			echo "<div class='course-item col-md-12 equal'><h2>{$result["ID"]}</h2><br>Част от курса '{$result["Course"]}'<br><a href='{$result["ExamLink"]}' role='button' class='btn btn-raised active'>Домашно »</a></div>";
 		}
 	}
 ?>

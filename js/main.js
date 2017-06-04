@@ -1,5 +1,8 @@
 $.material.init();
-if ($.cookie("username") !== undefined) {
-	$("#admin").html("<a href=\"/admin\">Administration</a>");
-	$("#logout").html("<a href=\"/logout.php\">Logout</a>");
-}
+$("#langToggle").on ('click', function () {
+	$.ajax({
+		url: "/change_lang.php",
+	}).done(function() {
+		window.location.reload(false);
+	});
+});

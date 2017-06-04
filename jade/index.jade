@@ -18,7 +18,14 @@ block content
 			.col-md-12
 				.panel.panel-primary
 					.panel-heading
+						.icon.pull-right
+							i(id="spinner", class="fa fa-refresh fa-3x fa-fw", onclick="$(this).addClass ('fa-spin'); update();")
 						h3.list-title Препоръчано
+					.panel-body
+						.col-md-6#recom
+							<?php include_once ($_SERVER["DOCUMENT_ROOT"] . "/lib/get/ait.php") ?>
+						.col-md-6
+							img(class="img-responsive", src="/img/bot.jpg")
 					.panel-body
 						<?php include_once ($_SERVER["DOCUMENT_ROOT"] . "/lib/get/ait.php") ?>
 	ul.row
@@ -56,3 +63,17 @@ block content
 				.panel-body
 					<?php include_once ($_SERVER["DOCUMENT_ROOT"] . "/lib/get/news.php");	?>
 					a.btn.btn-raised.btn-success(href="/news", style="margin-left: 10px; color: white !important;") Виж всички
+
+block js
+	script.
+		function update ()
+		{
+			$.ajax({
+				url: "/lib/get/ait.php",
+				type: "get",
+				dataType: "html",
+				success: function (data) {
+					$('#recom').html(data);
+					$('#spinner').removeClass('fa-spin');
+				}});
+		}

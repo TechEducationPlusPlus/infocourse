@@ -1,5 +1,7 @@
 <?php
-		session_start();
+	session_start();
+	if (!isset ($_SESSION) or !isset ($_SESSION["lang"]))
+		$_SESSION["lang"] = "en";
 	set_time_limit (10);
 	file_put_contents("php://stdout", "\nRequested: " . $_SERVER['REQUEST_URI'] . "\n");
 	$url = parse_url($_SERVER['REQUEST_URI']);

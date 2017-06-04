@@ -40,7 +40,7 @@
 				); 
 		}
 
-		return false;
+		
 	}
 	else if (preg_match ("/\/courses\/.*\/videos\/.*/", $_SERVER['REQUEST_URI']) != 0)
 	{
@@ -88,7 +88,7 @@
 				); 
 		}
 
-		return false;
+		
 	}
 	else if (preg_match ("/\/courses\/.*/", $_SERVER['REQUEST_URI']) != 0)
 	{
@@ -122,7 +122,7 @@
 			str_replace ("{{title}}", $conn->query ("SELECT * FROM `Courses` WHERE `Link`='" . $_SERVER['REQUEST_URI'] . "'")->fetch_assoc ()["ID"],
 			str_replace ("{{all}}", $all, str_replace("{{plan}}", "", $file))); 
 
-		return false;
+		
 	}
 	else if (preg_match ("/\/tracks\/.*/", $_SERVER['REQUEST_URI']) != 0)
 	{
@@ -159,11 +159,11 @@
 		catch (Exception $e) {
 			echo str_replace ("{{plan}}", '', $file);  
 		}
-		return false;
+		
 	}
 	else
 	{
 		$_GET['_uri'] = $_SERVER['REQUEST_URI'] . '.php';
-		return false;
+		
 	}
 ?>
