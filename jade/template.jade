@@ -63,7 +63,8 @@ html(lang='en')
 							a(href=typeof aboutclass === "undefined" ? "/aboutus.php" : "#") За нас
 					ul.nav.navbar-nav.navbar-right
 						li(class=typeof loginclass === "undefined" ? "" : "active")
-							a(href=typeof loginclass === "undefined" ? "/login.php" : "#") Login
+							a(href=typeof loginclass === "undefined" ? "/login.php" : "#") 
+								<?php if (isset ($_SESSION["userid"])) { echo $_SESSION["name"]; } else { echo "Login"; } ?> 
 		block content
 		footer
 			.container.container-holder

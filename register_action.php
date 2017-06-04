@@ -32,6 +32,7 @@
 
 		session_start();
 		$_SESSION['userid'] = $num_of_users + 1;
+		$_SESSION['name'] = $_REQUEST["Name"];
 
         header('location: /index.php');
     }

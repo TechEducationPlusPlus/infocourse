@@ -30,6 +30,7 @@
 	if ($valid)
     {
 		$_SESSION['userid'] = $number;
+		$_SESSION['name'] = $name;
 
         header('location: /');
     }
