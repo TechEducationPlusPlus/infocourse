@@ -250,7 +250,8 @@ INSERT INTO `Videos` (`ID`, `Course`, `Link`, `Source`, `Label`, `ExamLink`, `Un
 ('List of neighbours', 'Graphs', '/courses/Algorithms/videos/List_of_neighbours', 'https://www.youtube.com/embed/xqRLrrxjM-U', 'Marin Shalamanov', '#', 49),
 ('BFS', 'Graphs', '/courses/Algorithms/videos/BFS', 'https://www.youtube.com/embed/qax90KL-lMk', 'Marin Shalamanov', '#', 50),
 ('Min path with BFS', 'Graphs', '/courses/Algorithms/videos/Min_path_in_Graph', 'https://www.youtube.com/embed/igAboBxH4YE', 'Marin Shalamanov', '#', 51),
-('Welcome to TechEdu++', 'Java', '/courses/Java/videos/welcome', 'https://www.youtube.com/embed/M3Mr20rfr64', 'Hristo Todorov', '#', 53),
+('Welcome to TechEdu++', 'Java1', '/courses/Java1/videos/welcome', 'https://www.youtube.com/embed/M3Mr20rfr64', 'Hristo Todorov', '#', 53),
+('Introduction to programming', 'Java1', '/courses/Java1/videos/intro', 'https://www.youtube.com/embed/MKk3b49f1w8', 'Hristo Todorov', '#', 54),
 ('DFS', 'Graphs', '/courses/Algorithms/videos/DFS', 'https://www.youtube.com/embed/dSqZZqjoDjA', 'Marin Shalamanov', '#', 52);
 
 --
