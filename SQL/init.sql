@@ -61,7 +61,7 @@ INSERT INTO `Courses` (`Num`, `ID`, `Track`, `Link`, `Label`, `ExamLink`) VALUES
 (3, 'C++ Fundamentals', 'C++', '/courses/C++1', '', '#'),
 (4, 'C++ Advanced', 'C++', '/courses/C++2', '', '#'),
 (5, 'Sort&amp;Find', 'Algorithms', '/courses/SortFind', '', '#'),
-(6, 'Graphs', 'Algorithms', '/courses/Graphs', '', '#',
+(6, 'Graphs', 'Algorithms', '/courses/Graphs', '', '#'),
 (7, 'Java Fundamentals', 'Java', '/courses/Java1', '', '#');
 
 -- --------------------------------------------------------
