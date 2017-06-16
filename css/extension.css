@@ -153,3 +153,8 @@ ul.social li {
 	border: 0;
 	margin: 8px 17px;
 }
+#markdown {
+    background-image: url(/img/bot_plan.jpg));
+    background-position: right top;
+    background-repeat: no-repeat;
+}
