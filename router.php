@@ -110,7 +110,8 @@
 			{
 				$all = $all . "<div class=\"course-item col-md-4 equal\">";
 				$all = $all . "<h2>{$row["ID"]}</h2>";
-				$all = $all . "<a href=\"{$row["Link"]}\" role=\"button\" class=\"btn btn-raised active\">Видео »</a>";
+				if ($row["Source"] != "#")
+					$all = $all . "<a href=\"{$row["Link"]}\" role=\"button\" class=\"btn btn-raised active\">Видео »</a>";
 				if ($row["ExamLink"] != "#")
 					$all = $all . "<a href=\"{$row["ExamLink"]}\" role=\"button\" class=\"btn btn-raised btn-success\">Домашно »</a>";
 				$all = $all . "</div>";

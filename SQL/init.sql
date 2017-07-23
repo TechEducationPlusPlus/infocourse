@@ -62,7 +62,9 @@ INSERT INTO `Courses` (`Num`, `ID`, `Track`, `Link`, `Label`, `ExamLink`) VALUES
 (4, 'C++ Advanced', 'C++', '/courses/C++2', '', '#'),
 (5, 'Sort&amp;Find', 'Algorithms', '/courses/SortFind', '', '#'),
 (6, 'Graphs', 'Algorithms', '/courses/Graphs', '', '#'),
-(7, 'Java Fundamentals', 'Java', '/courses/Java1', '', '#');
+(7, 'Java Fundamentals', 'Java', '/courses/Java1', '', '#'),
+(8, 'C++ OOP', 'C++', '/courses/C++2', '', '#')
+	;
 
 -- --------------------------------------------------------
 
@@ -176,7 +178,7 @@ CREATE TABLE `Users` (
 --
 
 INSERT INTO `Users` (`Username`, `Name`, `Email`, `Password`, `ID`) VALUES
-('alex_ts', 'Alex Tsvetanov', 'alex@techedu.cf', 'a204d95d18da65e6150c2b549aadc3e5', 2);
+('alex_ts', 'Alex Tsvetanov', 'alex@techedu.bg', 'a204d95d18da65e6150c2b549aadc3e5', 2);
 
 -- --------------------------------------------------------
 
@@ -230,10 +232,9 @@ INSERT INTO `Videos` (`ID`, `Course`, `Link`, `Source`, `Label`, `ExamLink`) VAL
 ('Phonebook - Part 1<br><br><br>', 'PHP2', '/courses/PHP/videos/27', 'https://www.youtube.com/embed/ee-dFlCWKj4', 'Author: Yasen Georgiev', '#'),
 ('Phonebook - Part 2<br><br><br>', 'PHP2', '/courses/PHP/videos/28', 'https://www.youtube.com/embed/XP3W5XqTrPM', 'Author: Yasen Georgiev', '#'),
 ('Introduction to C++ (#<span class=\"nvote\" data-return=\"true\">TechEdu Course 1</span>)', 'C++1', '/courses/C++/videos/Introduction+to+C%2b%2b', 'https://www.youtube.com/embed/Ot3Uxh6bZxU', 'Alex Tsvetanov', '#'),
-('I/O Stream', 'C++1', '/courses/C++/videos/IO%20Stream', 'https://www.youtube.com/embed/phM0lHrmVnE', 'Alex Tsvetanov', 'https://atj.openjudge.tk/contests/1'),
+('I/O Stream', 'C++1', '/courses/C++/videos/IO%20Stream', 'https://www.youtube.com/embed/phM0lHrmVnE', 'Alex Tsvetanov', '#'),
 ('Data Types and Variables', 'C++1', '/courses/C++/videos/DataTypesVariables', 'https://www.youtube.com/embed/QCvTRpruM8E', 'Alex Tsvetanov', '#'),
 ('Overflow, underflow and casting', 'C++1', '/courses/C++/videos/OverUnderCast', 'https://www.youtube.com/embed/zWMbeBmz4EU', 'Alex Tsvetanov', '#'),
-('Pointers', 'C++1', '/courses/C++/videos/Pointers', 'https://www.youtube.com/embed/M51p8Rs_4ls', 'Alex Tsvetanov', '#'),
 ('Sort function', 'C++2', '/courses/C++/videos/sort_func', 'https://www.youtube.com/embed/okiF-XsrSWY', 'Marin Shalamanov', '#'),
 ('Binary search function', 'C++2', '/courses/C++/videos/binary_search_function', 'https://www.youtube.com/embed/slk-hXnrXF0', 'Marin Shalamanov', '#'),
 ('lower/upper bound', 'C++2', '/courses/C++/videos/bound_functions', 'https://www.youtube.com/embed/NJJ3CEKHySU', 'Marin Shalamanov', '#'),
@@ -249,13 +250,15 @@ INSERT INTO `Videos` (`ID`, `Course`, `Link`, `Source`, `Label`, `ExamLink`) VAL
 ('Introduction to programming', 'Java1', '/courses/Java1/videos/intro', 'https://www.youtube.com/embed/MKk3b49f1w8', 'Hristo Todorov', '#'),
 ('DFS', 'Graphs', '/courses/Algorithms/videos/DFS', 'https://www.youtube.com/embed/dSqZZqjoDjA', 'Marin Shalamanov', '#'),
 ('Operators and expressions', 'C++1', '/courses/C++1/videos/OperExpr', "https://www.youtube.com/embed/EN-cHRswnr4", 'Alex Tsvetanov', '#'),
+('First steps in C++', 'C++1', '/courses/C++1/videos/FirstSteps', "#", 'Alex Tsvetanov', 'https://judge.techedu.bg/contests/6b72925241b2220253204adfde3556af'),
 ('char, Ascii table', 'C++1', '/courses/C++1/videos/chars', "https://www.youtube.com/embed/OHPCq9Mgb0I", 'Alex Tsvetanov', '#'),
 ('if-else', 'C++1', '/courses/C++1/videos/if-else', "https://www.youtube.com/embed/rhOW_IkbUY4", 'Alex Tsvetanov', '#'),
 ('switch-case', 'C++1', '/courses/C++1/videos/switch-case', 'https://www.youtube.com/embed/LrgWAXps1C0', 'Alex Tsvetanov', '#'),
 ('Introduction to loops', 'C++1', '/courses/C++1/videos/LoopsInto', "https://www.youtube.com/embed/_4Zr66NdjKQ", 'Dobrin Bashev', '#'),
 ('For, While, Do-while loops', 'C++1', '/courses/C++1/videos/LoopsOperators', "https://www.youtube.com/embed/LZLg2fxbw0s", 'Dobrin Bashev', '#'),
 ('Nested loops, break/continue', 'C++1', '/courses/C++1/videos/NestedLoops', "https://youtu.be/tLhyoOlhC2E", 'Dobrin Bashev', '#'),
-('Loops workshop', 'C++1', '/courses/C++1/videos/LoopsWorkshop', "https://youtu.be/WhCTwXYOF3M", 'Dobrin Bashev', '#')
+('Loops workshop', 'C++1', '/courses/C++1/videos/LoopsWorkshop', "https://youtu.be/WhCTwXYOF3M", 'Dobrin Bashev', '#'),
+('Pointers', 'C++2', '/courses/C++/videos/Pointers', 'https://www.youtube.com/embed/M51p8Rs_4ls', 'Alex Tsvetanov', '#')
 ;
 
 --('if-else', 'C++1', '/courses/C++/videos/if-else', 'https://www.youtube.com/embed/sPV2_eJtgmk', 'Evgeni Vasilev', '#'),
