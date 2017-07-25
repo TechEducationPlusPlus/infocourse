@@ -256,8 +256,9 @@ INSERT INTO `Videos` (`ID`, `Course`, `Link`, `Source`, `Label`, `ExamLink`) VAL
 ('switch-case', 'C++1', '/courses/C++1/videos/switch-case', 'https://www.youtube.com/embed/LrgWAXps1C0', 'Alex Tsvetanov', '#'),
 ('Introduction to loops', 'C++1', '/courses/C++1/videos/LoopsInto', "https://www.youtube.com/embed/_4Zr66NdjKQ", 'Dobrin Bashev', '#'),
 ('For, While, Do-while loops', 'C++1', '/courses/C++1/videos/LoopsOperators', "https://www.youtube.com/embed/LZLg2fxbw0s", 'Dobrin Bashev', '#'),
-('Nested loops, break/continue', 'C++1', '/courses/C++1/videos/NestedLoops', "https://youtu.be/tLhyoOlhC2E", 'Dobrin Bashev', '#'),
-('Loops workshop', 'C++1', '/courses/C++1/videos/LoopsWorkshop', "https://youtu.be/WhCTwXYOF3M", 'Dobrin Bashev', '#'),
+('Nested loops, break/continue', 'C++1', '/courses/C++1/videos/NestedLoops', "https://www.youtube.com/embed/tLhyoOlhC2E", 'Dobrin Bashev', '#'),
+('Loops workshop', 'C++1', '/courses/C++1/videos/LoopsWorkshop', "https://www.youtube.com/embed/WhCTwXYOF3M", 'Dobrin Bashev', '#'),
+('Arrays', 'C++1', '/courses/C++1/videos/Arrays', "https://www.youtube.com/embed/qXjmAjJraWM", 'Alex Tsvetanov', '#'),
 ('Pointers', 'C++2', '/courses/C++/videos/Pointers', 'https://www.youtube.com/embed/M51p8Rs_4ls', 'Alex Tsvetanov', '#')
 ;
 
