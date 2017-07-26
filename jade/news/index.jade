@@ -8,198 +8,38 @@ block classes
 extends ../template
 
 block styles
-	style(type='text/css').
-		.carousel .item {
-		    height: 700px !important;
-		}
-		.carousel-inner > .item > img,
-		.carousel-inner > .item > a > img {
-			width: 70%;
-			margin: auto;
-		}
-
-		.spacing {
-			height: 100px;
-		}
-
-		article {
-			padding: 0 15% 0 15%;
-		}
-
-		.logo {
-			font-size: 3em;
-		}
-		
-		.item header .logo img {
-		    max-height: 250px;
-		    max-width: 550px;
-		}
-
-		article>header {
-			font-size: 25pt;
-		}
-
-		article>header>p {
-			font-size: 0.4em;
-		}
-
-		article>header>summary {
-			font-size: 0.5em;
-		}
-		#myCarousel {
-			background-color: white;
-			height: auto !important;
-		} 
-		#myCarousel article>aside {
-			font-size: 1.5em;
-			float: left;
-		}
-		#all article {
-			border-top: 5px solid #eee;
-			padding-top: 5px;
-			padding-bottom: 5px;
-		}
-		#all article>header {
-			display:inline-block;
-			margin-right:10px;
-			width: 45%;
-		}
-		#all article>aside {
-			padding-top: 240px;
-			vertical-align: top;
-			font-size: 1.5em;
-			position: relative;
-			/*left: 50%;*/
-			display:inline-block;
-			text-align: left;
-			width: 45%;
-		}
-
-		article.hideMe:after {
-			vertical-align: -100px;
-			font-size: 1.5em;
-			text-decoration: underline;
-			content:"For more information click here.";
-		}
-
-		#row
-		{
-			border: 2px solid gray;
-		}
-		#joke
-		{
-			text-align: left;
-		}
-
-		.item {
-			height: 650px;
-		}
-		.space {
-			height: 50px;
-		}
-
+	style.
+		.event.active { }
+		.event.inactive { opacity: 0.4; }
+		.event h1 { text-align: center; text-decoration: underline; color: #00b3a1; }
+		#news hr { border-top: 1px solid black !important; }
+		.event p { font-size: 1.35em; }
+		#news .container.inactive { background-color: white; margin-left: auto;
+		margin-right: auto; border: 10px solid white; border-radius: 37px; box-shadow: 10px 10px 10px 10px rgba(0, 150, 136, 0.4); margin-bottom: 55px;}
+		#news .container.active { background-color: white; margin-left: auto;
+		margin-right: auto; border: 10px solid white; border-radius: 37px; box-shadow: 10px 10px 10px 10px rgba(0, 150, 136, 0.4); margin-bottom: 55px;}
+		#map { height: 100%; width: 100%; }
 block content
-		.space
-		span#page(style='display: none;')
-			| <?php 
-			| if (!isset ($_REQUEST["page"])) 
-			| { 
-			| echo "1"; 
-			| } 
-			| else 
-			| { 
-			| echo $_REQUEST["page"]; 
-			| } 
-			| ?> 
-		#top(style='display: none;') 
-			| <?php 
-			| include ($_SERVER["DOCUMENT_ROOT"] . "/api/news.php");	
-			| ?>
-		#news_container(style='display: none;') 
-			| <?php 
-			| include ($_SERVER["DOCUMENT_ROOT"] . "/api/news.php");	
-			| ?>
-		#myCarousel.carousel.slide(data-ride='carousel')
-			ol.carousel-indicators
-			.carousel-inner(role='listbox')
-			a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
-				span.icon-prev(aria-hidden='true')
-				span.sr-only Предишна страница
-			a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
-				span.icon-next(aria-hidden='true')
-				span.sr-only Следваща страница
-		#all  
-		hr
-		.container
-			.row
-				#joke.col-md-10
-					h2 
-						| <?php 
-						| echo file_get_contents (__DIR__ . "/jokes/" . (rand () % 72 + 1) . ".php"); 
-						| ?>
-		ul.pager
-			li.previous
-				a#prev(href='#') Предишна страница
-			li.next
-				a#next(href='#') Следваща страница
-
+	center#spinner
+		i.fa.fa-spin.fa-spinner.fa-5x
+	#all(style='display: none;')
+		center
+			#buttons.container
+		div(style='height: 35px')
+		#news
+	#myModal.modal.fade(role='dialog')
+		.modal-dialog
+			.modal-content
+				.modal-header
+					button.close(type='button', data-dismiss='modal') ×
+					h4.modal-title Map
+				.modal-body(style='height: 500px;')
+					#map
+				.modal-footer
+					button.btn.btn-default(type='button', data-dismiss='modal') Close
 block js
-		script.
-			let slides = $(".carousel-inner")[0];
-			let all = $("#all");
-			let indicators = $(".carousel-indicators")[0];
-			let topNews = $("#top>article"); 
-			let articles = $("#news_container>article"); 
-			{
-				let div = document.createElement("div");
-				let newElement = topNews[0].cloneNode ("true");
-				(newElement).className = "hideMe";
-				$(newElement.children[newElement.children.length - 1]).hide();
-				div.append(newElement);
-				div.innerHTML += '<div class="spacing"> </div>';
-				div.className = "item active";
-				slides.append(div);
-				indicators.innerHTML += ('<li data-target="#myCarousel" data-slide-to="0" class="active"></li>');
-			}
-			for (let i = 1; i < 10 && i < topNews.length; i += 1) {
-				console.log (i + " < " + topNews.length); 
-				let div = document.createElement("div");
-				let newElement = topNews[i].cloneNode ("true");
-				newElement.className = "hideMe";
-				$(newElement.children[newElement.children.length - 1]).hide();
-				div.append(newElement);
-				div.innerHTML += '<div class="spacing"> </div>';
-				div.className = "item";
-				slides.append(div);
-				indicators.innerHTML += ('<li data-target="#myCarousel" data-slide-to="' + i + '"></li>');
-			}
-			for (let i = 0; i < articles.length; i += 1) {
-				console.log (i + " <<<< " + articles.length); 
-				let newElement = articles[i].cloneNode ("true");
-				$(newElement.children[newElement.children.length - 1]).show();
-				all.append (newElement);
-				all.innerHTML += '<hr>';
-			}
-			$(".item article").click(function() {
-				if (this.className == "showMe") {
-					(this).className = "hideMe";
-					$(this.children[this.children.length - 1]).hide(500);
-				} else {
-					(this).className = "showMe";
-					$(this.children[this.children.length - 1]).show(500);
-				}
-			});
+	script(src='/news/node_modules/linkifyjs/dist/linkify.min.js')
+	script(src='/news/node_modules/linkifyjs/dist/linkify-jquery.min.js')
+	script(src='/js/get_events.js')
+	script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDrMTsyXH5f1Ib7GPyKk8aXgnVvWaaKi5E&callback=initMap', async='', defer='')
 
-			let page = Number ($("#page").html());
-			let next = "/news/" + (page + 1);
-			let prev = "/news/" + (page - 1);
-			if (page + 1 > 1)
-			{
-				next = "#";
-			}
-			if (page - 1 < 1)
-			{
-				prev = "#";
-			}
-			$("#next").attr ("href", next);
-			$("#prev").attr ("href", prev);
