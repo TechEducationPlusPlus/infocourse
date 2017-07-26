@@ -13,9 +13,9 @@ const urls = {
 	TechEduPP: "https://techedu.bg",
 	SoftwareUniversity: "https://softuni.bg",
 	devbulgaria: "http://dev.bg",
-	CoderDojoBulgaria: "",
-	HSSIMI: "",
-	vrexpressbg: "",
+	CoderDojoBulgaria: "https://www.coderdojobulgaria.com/",
+	HSSIMI: "http://www.math.bas.bg/omi/hssimi/",
+	vrexpressbg: "http://www.vrexpress.bg/",
 };
 
 window.events = {};
