@@ -112,7 +112,8 @@ CREATE TABLE `Seminars` (
 --
 
 INSERT INTO `Seminars` (`Num`, `ID`, `Name`, `Link`, `Source`, `Label`, `ExamLink`, `Author`) VALUES
-(1, '0', 'C++17', '/seminars/C++17', 'https://www.youtube.com/embed/ZGxFkMTm27M', 'By Alex Tsvetanov & Dimo Chanev in SoftUni', '#', '');
+(1, '0', 'C++17', '/seminars/C++17', 'https://www.youtube.com/embed/ZGxFkMTm27M', 'By Alex Tsvetanov & Dimo Chanev in SoftUni', '#', ''),
+(2, '1', '', '/seminars/bitcoin', 'https://www.youtube.com/embed/-2lt8g4Ot2s', 'Bitcoin - технология, инвестиции, рискове in SoftUni', '#', '');
 
 -- --------------------------------------------------------
 
